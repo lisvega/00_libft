@@ -1,48 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lisriver <lisriver@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/05 19:50:10 by lisriver          #+#    #+#             */
-/*   Updated: 2023/11/12 15:30:58 by lisriver         ###   ########.fr       */
+/*   Created: 2023/11/12 15:34:54 by lisriver          #+#    #+#             */
+/*   Updated: 2023/11/12 15:36:24 by lisriver         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	char	*mapi;
 	size_t	i;
 
-	if (!s || !f)
-		return (NULL);
-	mapi = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
-	if (!mapi)
-		return (NULL);
 	i = 0;
 	while (s[i])
 	{
-		mapi[i] = f(i, s[i]);
+		f(i, &s[i]);
 		i++;
 	}
-	mapi[i] = '\0';
-	return (mapi);
+	s[i] = '\0';
 }
 
-/*char f(unsigned int i, char c)
+/*void printichar(unsigned int i, char *character)
 {
-	char str;
-	str = c + 1;
-	return (str);
+    printf("Índice: %d, Carácter: %c\n", i, *character);
 }
 
 int main(void)
 {
-	char str1[] = "abc";
-	char* str2;
-	str2 = ft_strmapi(str1, *f);
-	printf("%s\n", str2);
+	char str[] = "hello";
+	printf("Original: %s\n", str);
+	ft_striteri(str, printichar);
+	return (0);
 }*/
