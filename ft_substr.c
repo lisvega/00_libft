@@ -6,7 +6,7 @@
 /*   By: lisriver <lisriver@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 11:46:09 by lisriver          #+#    #+#             */
-/*   Updated: 2023/11/05 17:05:18 by lisriver         ###   ########.fr       */
+/*   Updated: 2023/11/21 11:33:12 by lisriver         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	size_t	j;
 
 	new_str = NULL;
-	if (!*s || ft_strlen(s) <= start)
+	if (!s || ft_strlen(s) <= start)
 		return (ft_strdup("\0"));
 	if (ft_strlen(s + start) <= len)
 		len = ft_strlen(s + start);

@@ -6,14 +6,14 @@
 /*   By: lisriver <lisriver@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 16:06:52 by lisriver          #+#    #+#             */
-/*   Updated: 2023/11/05 17:04:32 by lisriver         ###   ########.fr       */
+/*   Updated: 2023/11/11 10:59:54 by lisriver         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 int	ft_atoi(const char *str)
-{	
+{
 	int	sign;
 	int	sol;
 

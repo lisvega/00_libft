@@ -6,7 +6,7 @@
 /*   By: lisriver <lisriver@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 19:42:18 by lisriver          #+#    #+#             */
-/*   Updated: 2023/11/05 20:47:37 by lisriver         ###   ########.fr       */
+/*   Updated: 2023/11/19 17:40:16 by lisriver         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
     char *str = "colonia";
     char *sub = "jardin";
-    char *god = ft_strjoin(str, sub);
+    char *good = ft_strjoin(str, sub);
 	
     printf("%s", god);
     return 0;

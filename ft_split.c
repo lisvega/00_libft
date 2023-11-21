@@ -6,7 +6,7 @@
 /*   By: lisriver <lisriver@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 21:18:26 by lisriver          #+#    #+#             */
-/*   Updated: 2023/11/05 16:23:07 by lisriver         ###   ########.fr       */
+/*   Updated: 2023/11/21 11:31:20 by lisriver         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static	size_t	wordlen(char const *s, char c)
 	return (size);
 }
 
-static void	ft_free(size_t i, char **str)
+static void	*ft_free(size_t i, char **str)
 {
 	while (i > 0)
 	{
@@ -54,6 +54,7 @@ static void	ft_free(size_t i, char **str)
 		free(*(str + i));
 	}
 	free(str);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
@@ -77,24 +78,27 @@ char	**ft_split(char const *s, char c)
 		wordsize = wordlen(s + start, c);
 		matrix[j] = ft_substr(s, start, wordsize);
 		if (!matrix[j])
-			return (ft_free(j, matrix), NULL);
+			return (ft_free(j, matrix));
 		start += wordsize;
 	}
 	matrix[j] = 0;
 	return (matrix);
 }
-/*int	main(void)
+
+/*int main(void)
 {
-	char string[] = "hola como2 estas dhd";
+	char string[] = "hola estudiantes de 42Madrid";
 	char sub = ' ';
-	//printf ("%d", (int)words(string, sub));
+
 	char **matrixx = ft_split(string, sub);
-	int i = 0;
-	while (i < wordcount(string, sub) + 1)
+	int i;
+	i = 0;
+
+	while(i < wordcount(string, sub)+ 1)
 	{
 		printf("%s\n", matrixx[i]);
 		free(matrixx[i]);
-				i++;
+		i++;
 	}
-	return 0;
+	return(0);
 }*/

@@ -6,7 +6,7 @@
 /*   By: lisriver <lisriver@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 09:34:54 by lisriver          #+#    #+#             */
-/*   Updated: 2023/10/16 11:44:38 by lisriver         ###   ########.fr       */
+/*   Updated: 2023/11/18 14:49:54 by lisriver         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isalpha(int c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{
 		return (1);
 	}
@@ -28,7 +28,7 @@ int	ft_isalpha(int c)
 {
 	char	caracter;
 
-caracter = '5';
+    caracter = '5';
 	printf("%d", ft_isalpha(caracter));
 	return (0);
 }*/

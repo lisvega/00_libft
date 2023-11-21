@@ -6,7 +6,7 @@
 #    By: lisriver <lisriver@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:07:50 by lisriver          #+#    #+#              #
-#    Updated: 2023/11/05 19:52:22 by lisriver         ###   ########.fr        #
+#    Updated: 2023/11/21 10:42:16 by lisriver         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,12 +30,14 @@ SRCS		=	ft_atoi.c\
 				ft_memmove.c \
 				ft_memcpy.c \
 				ft_strdup.c \
+				ft_strjoin.c\
 				ft_strlen.c \
 				ft_strchr.c \
 				ft_strrchr.c \
 				ft_strnstr.c \
 				ft_strncmp.c\
 				ft_strtrim.c\
+				ft_striteri.c\
 				ft_strlcpy.c\
 				ft_strlcat.c\
 				ft_putchar_fd.c\

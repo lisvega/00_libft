@@ -6,7 +6,7 @@
 /*   By: lisriver <lisriver@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 19:50:10 by lisriver          #+#    #+#             */
-/*   Updated: 2023/11/12 15:30:58 by lisriver         ###   ########.fr       */
+/*   Updated: 2023/11/12 15:28:50 by lisriver         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 int main(void)
 {
-	char str1[] = "abc";
-	char* str2;
+	char str1[] = "abcdf";
+	char *str2;
 	str2 = ft_strmapi(str1, *f);
 	printf("%s\n", str2);
 }*/

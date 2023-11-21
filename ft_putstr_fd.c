@@ -6,7 +6,7 @@
 /*   By: lisriver <lisriver@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 10:34:19 by lisriver          #+#    #+#             */
-/*   Updated: 2023/11/01 18:28:26 by lisriver         ###   ########.fr       */
+/*   Updated: 2023/11/21 10:24:04 by lisriver         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	write (fd, s, ft_strlen(s));
+	if (s != NULL)
+		write (fd, s, ft_strlen(s));
 }
 
-/*int	main(void)
+/* int	main(void)
 {
 	char str[]= "pepito";
-	ft_putstr_fd(str, 1);
+	ft_putstr_fd(NULL, 1);
 	return(0);
-}*/
+} */

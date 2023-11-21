@@ -6,7 +6,7 @@
 /*   By: lisriver <lisriver@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 19:17:48 by lisriver          #+#    #+#             */
-/*   Updated: 2023/10/20 17:06:43 by lisriver         ###   ########.fr       */
+/*   Updated: 2023/11/17 11:31:01 by lisriver         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,4 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	printf("%d", ft_memcmp(str, str2, 4));
 	return (0);
 }*/
-// compara bloques de memporia por cada pasición y devueve la diferencia
+// compara bloques de memoria por cada posición y devueve la diferencia

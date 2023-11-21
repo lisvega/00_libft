@@ -6,7 +6,7 @@
 /*   By: lisriver <lisriver@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 17:51:03 by lisriver          #+#    #+#             */
-/*   Updated: 2023/10/17 10:47:19 by lisriver         ###   ########.fr       */
+/*   Updated: 2023/11/17 17:35:08 by lisriver         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 }
 /*int	main(void)
 {
-	char	sourse[4];
-	char	dst[10];
+	char	source[] = "hello world";
+	char	dst[20];
 	
-	ft_memcpy(dst, sourse, 9);
+	ft_memcpy(dst, source, 9);
 	printf("%s\n", dst);
 	return (0);
 }*/

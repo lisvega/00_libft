@@ -6,11 +6,11 @@
 /*   By: lisriver <lisriver@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 18:23:56 by lisriver          #+#    #+#             */
-/*   Updated: 2023/10/21 14:11:34 by lisriver         ###   ########.fr       */
+/*   Updated: 2023/11/11 10:55:13 by lisriver         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include  "libft.h"
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

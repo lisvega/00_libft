@@ -6,7 +6,7 @@
 /*   By: lisriver <lisriver@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 19:26:19 by lisriver          #+#    #+#             */
-/*   Updated: 2023/10/28 15:46:08 by lisriver         ###   ########.fr       */
+/*   Updated: 2023/11/21 11:41:55 by lisriver         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	j;
 
 	h = 0;
-	if (!*needle)
-	{
+	if (!haystack && len == 0)
 		return ((char *)haystack);
-	}
+	if (!*needle)
+		return ((char *)haystack);
 	while (haystack[h] != '\0' && h < len)
 	{
 		if (haystack[h] == needle[0])
@@ -32,10 +32,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 			{
 				if (needle[j + 1] == '\0')
 					return ((char *)haystack + h);
-			j++;
+				j++;
 			}
 		}
-	h++;
+		h++;
 	}
 	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: lisriver <lisriver@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 11:30:38 by lisriver          #+#    #+#             */
-/*   Updated: 2023/11/05 17:28:16 by lisriver         ###   ########.fr       */
+/*   Updated: 2023/11/19 19:58:34 by lisriver         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,49 +36,36 @@ static int	digits(int n)
 	return (digitlen);
 }
 
-static char	*min(void)
-{
-	char	*str;
-
-	str = (char *)malloc(sizeof(char) * 12);
-	if (!str)
-		return (NULL);
-	ft_strlcpy(str, "-2147483648", 12);
-	str[11] = '\0';
-	return (str);
-}
-
 char	*ft_itoa(int n)
 {
 	char		*string;
 	int			len;
+	long int	nbr;
 
 	len = digits(n);
-	if (n == -2147483648)
-		return (min());
+	nbr = n;
 	string = (char *)malloc(sizeof(char) * (len + 1));
 	if (!string)
 		return (NULL);
 	string[len] = '\0';
-	if (n == 0)
+	if (nbr == 0)
 		string[0] = '0';
-	if (n < 0)
+	if (nbr < 0)
 	{
 		string[0] = '-';
-		n = -n;
+		nbr = -nbr;
 	}
-	while (n > 0)
+	while (nbr > 0)
 	{	
 		len--;
-		string[len] = n % 10 + 48;
-		n /= 10;
+		string[len] = nbr % 10 + 48;
+		nbr /= 10;
 	}
 	return (string);
 }
-
 /*int main(void)
 {
-	int number = -345;
+	int number = -2147483648;
 	printf("%s", ft_itoa(number));
 	return 0;
 }*/
